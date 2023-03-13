@@ -60,7 +60,7 @@ RUN mkdir build \
 FROM --platform=$IMAGE_ARCH torizon/$BASE_NAME:2
 
 RUN apt-get update \
-    && apt-get install libfontconfig1 \
+    && DEBIAN_FRONTEND=noninteractive apt-get install libfontconfig1 libxkbcommon0 fonts-noto-core fonts-noto-cjk fonts-noto-cjk-extra fonts-noto-color-emoji fonts-noto-ui-core fonts-noto-ui-extra \
     && rm -rf /var/lib/apt/lists/*
 
 
