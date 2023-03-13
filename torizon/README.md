@@ -28,16 +28,16 @@ The provided docker file performs the following steps in a multi-stage build:
 
 Set the following build arguments to configure the docker file to use the correct target architecture.
 
-Torizon armhf Target Architecture:
+Torizon arm64 Target Architecture:
 
  - TOOLCHAIN_ARCH=arm64
  - IMAGE_ARCH=linux/arm64
  - RUST_TOOLCHAIN_ARCH=aarch64-unknown-linux-gnu
 
-Torizon arm64 Target Architecture:
+Torizon armhf Target Architecture:
 
  - TOOLCHAIN_ARCH=armhf
- - IMAGE_ARCH=linux/arm/v8
+ - IMAGE_ARCH=linux/arm/v7
  - RUST_TOOLCHAIN_ARCH=armv7-unknown-linux-gnueabihf
 
 If you're building with docker on the command line, the following example selects the arm64 architecture:
